@@ -33,7 +33,7 @@
             </li>
 
             <li>
-                <a href="" class="p-4">Sign Up</a>
+                <a href="/register" class="p-4">Sign Up</a>
             </li>
 
             <li>
