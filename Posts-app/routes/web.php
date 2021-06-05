@@ -16,13 +16,13 @@ use App\Http\Controllers\LogoutController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', function(){
+Route::get('/', function(){
     return view('home');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::post('/logout', [LogoutController::class, 'store']);
