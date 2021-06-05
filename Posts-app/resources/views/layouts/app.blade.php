@@ -11,11 +11,11 @@
     <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
             <li>
-                <a href="" class="p-4">Home</a>
+                <a href="/" class="p-4">Home</a>
             </li>
 
             <li>
-                <a href="" class="p-4">Dashboard</a>
+                <a href="/dashboard" class="p-4">Dashboard</a>
             </li>
 
             <li>
@@ -24,21 +24,29 @@
         </ul>
 
         <ul class="flex items-center">
+            @auth()
             <li>
                 <a href="" class="p-4">User</a>
             </li>
-
             <li>
-                <a href="" class="p-4">Login</a>
+                <form action="/logout" method="post" class=" p-3 inline">
+                    @csrf
+                    <button type="submit"> Logout</button>
+                </form>
+            </li>
+            @endauth
+
+            @guest()
+            <li>
+                <a href="/login" class="p-4">Login</a>
             </li>
 
             <li>
                 <a href="/register" class="p-4">Sign Up</a>
-            </li>
-
-            <li>
-                <a href="" class="p-4">Log Out</a>
-            </li>
+            </li>    
+       
+            @endguest
+            
         </ul>
     </nav>
     @yield('content')
