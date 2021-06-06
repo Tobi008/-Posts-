@@ -11,7 +11,7 @@
             <form method="POST" action="/login">
                 @csrf
                     <div class="mb-4">
-                        <label for="email" class="sr-omly">Email:</label>
+                        <label for="email" class="sr-only">Email:</label>
                         <input type="email" name="email" id="email"placeholder="Enter Email"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg  @error('email') border-red-500 @enderror" value="{{old('email')}}">
 
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="password" class="sr-omly">Password:</label>
+                        <label for="password" class="sr-only">Password:</label>
                         <input type="password" name="password" id="password"placeholder="Enter Password"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg  @error('password') border-red-500 @enderror" value="">
 
@@ -38,7 +38,7 @@
                         <label for="remember"> Remember me</label>
                     </div>
                     <div>
-                        <button type="submit" class="bg-blue-400 text white px-4 py-3 rounded font-medium w-full" style="cursor: pointer"> Login</button>
+                        <button type="submit" class="bg-blue-400 text-white px-4 py-2 rounded font-medium w-full" style="cursor: pointer"> Login</button>
                     </div>    
             </form>
         </div>

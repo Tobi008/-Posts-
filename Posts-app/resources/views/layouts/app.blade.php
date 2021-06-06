@@ -19,7 +19,7 @@
             </li>
 
             <li>
-                <a href="" class="p-4">Posts</a>
+                <a href="/posts" class="p-4">Posts</a>
             </li>
         </ul>
 

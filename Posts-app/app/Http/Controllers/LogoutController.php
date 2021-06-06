@@ -8,7 +8,7 @@ class LogoutController extends Controller
 {
     public function store(){
        auth()->logout();
-       return redirect('/home');
+       return redirect('/');
 
     }
 
