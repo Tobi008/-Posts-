@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PostLikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/posts',[PostsController::class, 'index'] );
 Route::post('/posts',[PostsController::class, 'store'] );
+
+Route::post('/posts/{post}/likes',[PostLikeController::class, 'store'])->name('posts.likes');
+Route::delete('/posts/{post}/likes',[PostLikeController::class, 'destroy'])->name('posts.likes');
