@@ -19,7 +19,7 @@ class RegisterController extends Controller
         return view('auth.register');
 
     }
-
+ 
     public function store(Request $request)
     {
         //validate the user 
@@ -38,6 +38,7 @@ class RegisterController extends Controller
        ]);
 
        //sign in user 
+
         auth()->attempt($request->only('email','password'));
         return redirect('/dashboard');
     }

@@ -36,6 +36,7 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/posts',[PostsController::class, 'index'])->name('posts');
+Route::get('/posts/{post}',[PostsController::class, 'show'])->name('post.show');
 Route::post('/posts',[PostsController::class, 'store']);
 Route::delete('/posts/{post}',[PostsController::class, 'destroy'])->name('posts.destroy');
 
