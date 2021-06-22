@@ -1,2 +1,2 @@
 #  Posts 
- Discussion page built with Laravel Framework showing features such as: Authentication, Validation, Controllers, Routing, Artisan CSRF Protection, Middleware, Models, 
+ Discussion page built with Laravel Framework showing different features such as: Authentication, Validation, Controllers, Routing, Artisan, CSRF Protection, Middleware, Models, Laravel Mix, route model binding, soft deleting, Database migrations, Laravel String Helpers, Blade components, Blade templates, Eloquent, Model factories, Eager loading, Eloquent relationship types, Sending email, Middleware, Pagination, Collections, Redirecting, Method spoofing. 				
