@@ -3,6 +3,7 @@
 @section('content')
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
+            @auth
             <form action="/posts" method="post" class="mb-4">
                 @csrf
                 <div class="mb-4">
@@ -19,8 +20,8 @@
                     <button type="submit" class="bg-blue-400 text-white px-4 py-3 rounded font-medium" style="cursor: pointer">Post</button>
                 </div> 
             </div>  
-            </form>
-
+            </form> 
+            @endauth
             @if ($posts->count())
                 @foreach ($posts as $post)
                     <x-post :post="$post" />
